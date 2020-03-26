@@ -1,12 +1,12 @@
 # functions-to-methods/
 
-> 3/10/2020, 1:12:28 PM 
+> 3/26/2020, 7:14:11 AM 
 
-## ./ - error
+## ./ - pass
 
 
 ### sub-directories
 
-* [getters/](./getters/REVIEW.md) - error
-* [setters/](./setters/REVIEW.md) - error
+* [getters/](./getters/REVIEW.md) - pass
+* [setters/](./setters/REVIEW.md) - pass
 
