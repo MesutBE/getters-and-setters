@@ -1,6 +1,6 @@
 # functions-to-methods/
 
-> 3/26/2020, 7:14:11 AM 
+> 3/28/2020, 5:24:49 PM 
 
 ## setters/ - pass
 
@@ -75,26 +75,26 @@ console.assert(obj2.greeting === "hi, I'm bye!", 'Test 4');
 const obj1 = {
   numbers: [12, 4, 9, 36],
   mods: [],
-  modulo: 3,
+  modul: 3,
   setModulo: function (newModulo) {
-    this.modulo = newModulo;
-    this.mods = this.numbers.map(x => x % this.modulo);
+    this.modul = newModulo;
+    this.mods = this.numbers.map(x => x % this.modul);
   }
 }
 
 const obj2 = {
   numbers: [12, 4, 9, 36],
   mods: [],
-  modulo: 3,
-  set Modulo(newModulo) {
-    this.modulo = newModulo;
-    this.mods = this.numbers.map(x => x % this.modulo);
+  modul: 3,
+  set modulo(newModulo) {
+    this.modul = newModulo;
+    this.mods = this.numbers.map(x => x % this.modul);
   }
 }
 
 
 obj1.setModulo(3);
-obj2.Modulo = '3'; // write this line
+obj2.modulo = '3'; // write this line
 
 const test1 = JSON.stringify(obj1.mods) === '[0,1,0,0]';
 console.assert(test1, 'Test 1');
@@ -104,7 +104,7 @@ console.assert(test2, 'Test 2');
 
 
 obj1.setModulo(2);
-obj2.Modulo = '2';; // write this line
+obj2.modulo = '2';; // write this line
 
 const test3 = JSON.stringify(obj1.mods) === '[0,0,1,0]';
 console.assert(test3, 'Test 3');
@@ -113,8 +113,8 @@ const test4 = JSON.stringify(obj2.mods) === '[0,0,1,0]';
 console.assert(test4, 'Test 4');
 
 
-obj1.modulo = 6;
-obj2.modulo = 6;
+obj1.modul = 6;
+obj2.modul = 6;
 
 const test5 = JSON.stringify(obj1.mods) === '[0,0,1,0]';
 console.assert(test5, 'Test 5');
@@ -161,7 +161,7 @@ const obj1 = {
 const obj2 = {
   entries: { first: 'hi!', second: 'bye!' },
   current: {},
-  set CurrentEntry(key) {
+  set currentEntry(key) {
     if (this.entries.hasOwnProperty(key)) {
       this.current = { [key]: this.entries[key] };
     } else {
@@ -173,7 +173,7 @@ const obj2 = {
 obj1.setCurrentEntry('second');
 console.assert(obj1.current.second === "bye!", 'Test 1');
 
-obj2.CurrentEntry = 'second'; // write this line
+obj2.currentEntry = 'second'; // write this line
 console.assert(obj2.current.second === "bye!", 'Test 2');
 
 
@@ -181,7 +181,7 @@ obj1.setCurrentEntry('first');
 console.assert(obj1.current.first === "hi!", 'Test 3');
 console.assert(obj1.current.hasOwnProperty('second') === false, 'Test 4');
 
-obj2.CurrentEntry = 'first'; // write this line
+obj2.currentEntry = 'first'; // write this line
 console.assert(obj2.current.first === "hi!", 'Test 5');
 console.assert(obj2.current.hasOwnProperty('second') === false, 'Test 6');
 
@@ -190,7 +190,7 @@ obj1.setCurrentEntry('hi');
 console.assert(obj1.current.hi === 'no entry with key "hi"', 'Test 7');
 console.assert(obj1.current.hasOwnProperty('first') === false, 'Test 8');
 
-obj2.CurrentEntry = 'hi'; // write this line
+obj2.currentEntry = 'hi'; // write this line
 console.assert(obj2.current.hi === 'no entry with key "hi"', 'Test 9');
 console.assert(obj2.current.hasOwnProperty('first') === false, 'Test 10');
 
