@@ -1,26 +1,26 @@
 const obj1 = {
   numbers: [12, 4, 9, 36],
   mods: [],
-  modulo: 3,
+  modul: 3,
   setModulo: function (newModulo) {
-    this.modulo = newModulo;
-    this.mods = this.numbers.map(x => x % this.modulo);
+    this.modul = newModulo;
+    this.mods = this.numbers.map(x => x % this.modul);
   }
 }
 
 const obj2 = {
   numbers: [12, 4, 9, 36],
   mods: [],
-  modulo: 3,
-  set Modulo(newModulo) {
-    this.modulo = newModulo;
-    this.mods = this.numbers.map(x => x % this.modulo);
+  modul: 3,
+  set modulo(newModulo) {
+    this.modul = newModulo;
+    this.mods = this.numbers.map(x => x % this.modul);
   }
 }
 
 
 obj1.setModulo(3);
-obj2.Modulo = '3'; // write this line
+obj2.modulo = '3'; // write this line
 
 const test1 = JSON.stringify(obj1.mods) === '[0,1,0,0]';
 console.assert(test1, 'Test 1');
@@ -30,7 +30,7 @@ console.assert(test2, 'Test 2');
 
 
 obj1.setModulo(2);
-obj2.Modulo = '2';; // write this line
+obj2.modulo = '2';; // write this line
 
 const test3 = JSON.stringify(obj1.mods) === '[0,0,1,0]';
 console.assert(test3, 'Test 3');
@@ -39,8 +39,8 @@ const test4 = JSON.stringify(obj2.mods) === '[0,0,1,0]';
 console.assert(test4, 'Test 4');
 
 
-obj1.modulo = 6;
-obj2.modulo = 6;
+obj1.modul = 6;
+obj2.modul = 6;
 
 const test5 = JSON.stringify(obj1.mods) === '[0,0,1,0]';
 console.assert(test5, 'Test 5');
